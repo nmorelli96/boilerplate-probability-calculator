@@ -28,7 +28,7 @@ def experiment(hat, expected_balls, num_balls_drawn, num_experiments):
     n = num_experiments
     m = 0   #times we get the expected goals
     while n > 0:
-        hat_copy = copy.deepcopy(hat)
+        hat_copy = copy.deepcopy(hat) #creates a new independent copy of hat before each experiment
         draw = hat_copy.draw(num_balls_drawn)
         t = 0  # times we get a single expected ball (not the whole group)
         for ball, count in expected_balls.items():
